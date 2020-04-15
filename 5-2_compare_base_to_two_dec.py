@@ -29,11 +29,12 @@ e = np.array([init] + [0] * (t - 1), dtype = 'float128')
 r = np.array([0] + [0] * (t - 1), dtype = 'float128')
 s = np.array([1 - r[0] - i[0]] + [0] * (t - 1), dtype = 'float128')
 
-k = 76
+k1 = 76
+k2 = 191
 
 for j in range(t - 1):
   beta_t = beta
-  if k <= j and j < k + 30:
+  if (k1 <= j and j < k1 + 30) or (k2 <= j and j < k2 + 30):
     beta_t = beta / 2
   s[j + 1] = s[j] - beta_t * s[j] * (i[j] + e[j])
   e[j + 1] = e[j] + beta_t * s[j] * (i[j] + e[j]) - alfa * e[j]
@@ -41,4 +42,4 @@ for j in range(t - 1):
   r[j + 1] = r[j] + gamma * i[j]
 
 plt.plot(r) 
-plt.savefig("5-1_conpare_base_to_one.png")
+plt.savefig("5-2_compare_base_to_two_dec.png")
