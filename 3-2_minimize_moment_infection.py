@@ -36,7 +36,7 @@ for k in range(t - dist):
   if min_max > tmp_max:
     min_max = tmp_max
     min_c = k
-  emg[k] = min_max
+  emg[k] = tmp_max
 print(min_max * 100)
 print(min_c)
 plt.plot(emg)
