@@ -1,0 +1,1 @@
+# corona_japanese_infection_analyzation
