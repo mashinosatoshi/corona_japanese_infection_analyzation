@@ -29,6 +29,6 @@ for j in range(t - 1):
   r[j + 1] = r[j] + gamma * i[j]
 
 plt.plot(s) 
-plt.plot(i) 
+plt.plot(i + e) 
 plt.plot(r) 
 plt.savefig("2-3_two_delayed_sir_chart.png")

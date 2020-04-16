@@ -25,6 +25,6 @@ for j in range(t - 1):
 print(r[-1] * 100)
 
 plt.plot(s) 
-plt.plot(i) 
+plt.plot(i + e) 
 plt.plot(r) 
 plt.savefig("2-1_japanese_sir_chart.png")
